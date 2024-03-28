@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+		*{
+			padding:0;
+			margin: 0;
+			box-sizing: border-box;
+			font-family: "Caveat", cursive;
+		}
+		.loader-container{
+			position: fixed;
+			width:100%;
+		         height:100vh;
+		         display: flex;
+		         justify-content: center;
+		         align-items: center;
+		         overflow: hidden;
+		         background-color: rgba(0, 0, 0, 0.6);
+		}
+		.hidden {
+      display: blur;
+    }
+		.envelope{
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			height: 200px;
+			width: 200px;
+			cursor: pointer;
+		}
+		.envelope-body{
+			position: absolute;
+			height: 15px;
+			width: 200px;
+			transition: 0.5s ;
+			text-align: center;
+
+		}
+		.envelope-body .body{
+			position: absolute;
+			bottom: 0;
+			height: 0;
+			width: 0;
+			left: -200px;
+			border-style: solid;
+			border-width: 0 0 300px 600px;
+			border-color: transparent transparent #f8d568 transparent;
+			z-index: 2;
+		}
+		.envelope-body .top-fold{
+			position: absolute;
+			top:-285px;
+			height: 0;
+			width: 0;
+			right: -200px;
+			border-style: solid;
+			border-width: 250px 300px 0 300px;
+			border-color: #e9d66b transparent transparent transparent;
+			transform-origin: 50% 0%;
+			transition: transform 0.5s 0.5s,z-index 0.25s 0.5s;
+			z-index: 2;
+		}
+		.envelope-body .back-fold{
+			position: absolute;
+			bottom: 0;
+			height: 300px;
+			width:600px;
+			right: -200px;
+			background-color: #e9d66b;
+			z-index: 0;
+		}
+		 .envelope-body .left-fold{
+			position: absolute;
+			bottom: 0;
+			height: 0;
+			width: 0;
+			left: -200px;
+			border-style: solid;
+			border-width: 1px 0 300px 600px;
+			border-color: transparent transparent transparent #eedc82;
+			z-index: 2;
+
+			
+		} 
+		.envelope-body .letter{
+			position: absolute;
+			left: -50px;
+			bottom: 0;
+			padding: 5px ;
+			border-radius: 25px;
+			height: 40px;
+			width: 400px;
+			background: url('letter_back.jpg');
+			transition: 0.5s 0.25s;
+			z-index: 1;
+			 overflow: hidden; 
+		}
+		
+		.envelope-body .letter .letter-title{
+			height: 10px;
+			width: 80%;
+			font-size: 2rem;
+			font-weight: 500;
+			text-align: center;
+			margin: 15px auto;	
+			opacity: 0.85;
+		}
+		.envelope-body .letter .letter-context{
+			height: 50px;
+			width: 80%;			
+			margin: 40px auto;
+			opacity: 0.85;
+			font-weight: 400;
+			font-size: 1.5rem;
+			}
+		
+		.envelope:hover .envelope-body{
+			transform: translateY(70px);
+		}
+		.envelope:hover .envelope-body .top-fold{
+			transform: rotateX(180deg);
+			z-index: 0;
+			transition: transform 0.5s, z-index 0.25s;
+		}
+		.envelope:hover .envelope-body .letter{
+			height: 630px;
+			margin-bottom:30px;
+			left: -195px;
+			width: 590px;
+			z-index: 2;
+		}
+		.envelope:hover .envelope-body .left-fold{
+			z-index: 0;
+		}
+		.envelope:hover .envelope-body .body{
+			z-index: 0;
+		}
+		
+		.content{
+			width:100%;
+			height:100vh;
+			display: flex;
+			justify-content:center;
+			align-items:center;
+			flex-direction: column;
+			font-size:4rem;
+		}
+		@media screen and (max-width: 767px) {
+			
+			/*.envelope .envelope-body{
+				width: 100px;
+			}*/
+			.envelope:hover .envelope-body .letter{
+				width: 400px;
+				height: 600px;
+			margin-bottom:30px;
+			left: -100px;
+/*			width: 590px;*/
+			z-index: 2;
+			}
+
+			.envelope-body .letter .letter-title{
+				height: 8px;
+				width: 60%;
+				font-size: 1.5rem;
+				font-weight: 500;
+				text-align: center;
+				margin: 15px auto;	
+				opacity: 0.85;
+			}
+
+			.envelope-body .letter .letter-context{
+				height: 40px;
+				width: 80%;			
+				margin: 60px auto;
+				opacity: 0.85;
+				font-weight: 500;
+				font-size: 18px;
+				}
+
+				.content{
+					width:auto;
+					height:auto;
+					display: flex;
+					justify-content:center;
+					align-items:center;
+					flex-direction: column;
+					font-size:35px;
+				}
+		}
