@@ -59,6 +59,12 @@
 			transition: transform 0.5s 0.5s,z-index 0.25s 0.5s;
 			z-index: 2;
 		}
+		.envelope-body .top-fold .top_header1{
+			font-size: 20px;
+			text-align: center;
+			font-family: monospace;
+			transition: 0.5s ease-in;
+		}
 		.envelope-body .back-fold{
 			position: absolute;
 			bottom: 0;
