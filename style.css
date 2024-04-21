@@ -21,7 +21,7 @@
 		         background-color: rgba(0, 0, 0, 0.6);
 		}
 		.hidden {
-      display: none;
+      display: blur;
 			z-index:0;
     }
 		.envelope{
@@ -158,7 +158,7 @@ html,body{
     box-sizing: border-box;
 }
 
-body{
+#first{
     background-image: url(content_bg.avif);
     min-height: 620%;
 
