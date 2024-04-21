@@ -21,7 +21,7 @@
 		         background-color: rgba(0, 0, 0, 0.6);
 		}
 		.hidden {
-      display: blur;
+      display: none;
 			z-index:0;
     }
 		.envelope{
