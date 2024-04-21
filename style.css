@@ -522,7 +522,7 @@ html,body{
 				
 		}
 @media screen and (max-width:600px) {
-    body{
+    #first{
         width: 896px;
         height: 414px;
         background-size: cover;
