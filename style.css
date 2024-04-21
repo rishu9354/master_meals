@@ -22,6 +22,7 @@
 		}
 		.hidden {
       display: blur;
+			z-index:0;
     }
 		.envelope{
 			position: absolute;
