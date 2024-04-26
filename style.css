@@ -160,7 +160,7 @@ html,body{
 
 #first{
     background-image: url(content_bg.avif);
-    min-height: 620%;
+    min-height: 100vh;
 
     position: relative;
     background-repeat: no-repeat;
